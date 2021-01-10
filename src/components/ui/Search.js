@@ -7,19 +7,10 @@ const Search = ({ getQuery }) => {
 		setText(q);
 		getQuery(q);
 	};
-
+	let url = "";
 	return (
 		<section className="search">
 			<form>
-				{/* <input
-          type='text'
-          className='form-control'
-          placeholder='Search characters'
-          value={text}
-          onChange={(e) => onChange(e.target.value)}
-          autoFocus
-        /> */}
-
 				<div class="search-bar">
 					<input
 						type="text"
@@ -30,7 +21,7 @@ const Search = ({ getQuery }) => {
 						onChange={(e) => onChange(e.target.value)}
 						autoFocus
 					/>
-					<a className="search-btn">
+					<a href={url} className="search-btn">
 						<i class="fas fa-search"></i>
 					</a>
 				</div>

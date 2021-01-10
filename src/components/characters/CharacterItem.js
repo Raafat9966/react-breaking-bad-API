@@ -26,14 +26,16 @@ const CharacterItem = ({ item }) => {
 						<li>
 							<strong>Appearance:</strong>{" "}
 							{item.appearance
-								? item.appearance.join("- ")
+								? `season ${item.appearance.join("- ")}`
 								: "None"}
 						</li>
 						<li>
 							<strong>Better Call Saul Appearance:</strong>{" "}
 							{item.better_call_saul_appearance.length === 0
 								? "None"
-								: item.better_call_saul_appearance.join("- ")}
+								: `season ${item.better_call_saul_appearance.join(
+										"- "
+								  )}`}
 						</li>
 						<li>
 							<strong>Status:</strong> {item.status}
